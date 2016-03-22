@@ -239,24 +239,39 @@
 # #     print(line)
 # # a=myfile.readlines()
 # a=myfile.readline()
-# print(a)
-x,y,z=1,2,3
-s='stop'
-t=(1,2)
-l=['a','b']
-d=dict(a=1,b=2,c=3)
-myfile = open('myfile','w')
-# print('%s%s%s \n' % (x,y,z))
-myfile.write('%s%s%s \n' % (x,y,z))
-myfile.write(s+'\n')
-myfile.write(str(t)+'\n')
-myfile.write(str(d)+'\n')
-myfile.close()
+# # print(a)
+# x,y,z=1,2,3
+# s='stop'
+# t=(1,2)
+# l=['a','b']
+# d=dict(a=1,b=2,c=3)
+# myfile = open('myfile','w')
+# # print('%s%s%s \n' % (x,y,z))
+# myfile.write('%s%s%s \n' % (x,y,z))
+# myfile.write(s+'\n')
+# myfile.write(str(t)+'\n')
+# myfile.write(str(d)+'\n')
+# myfile.close()
+#
+# myfile =open('myfile')
+# for line in myfile:
+#     print(line)
+#
+#
+#
+# # myfile =open('myfile').read()
+# # print(myfile)
+#
+# # int(p)
+# p='p'
+# print(ord(p))
 
-myfile =open('myfile')
-for line in myfile:
-    print(line)
-myfile =open('myfile').read()
-print(myfile)
+d=dict(a=1,b=2)
+f=open('datafile.pkl','wb')
+import pickle
+pickle.dump(d,f)
+f.close()
 
-print(myfile.readline(open('myfile')))
+f=open('datafile.pkl','rb')
+e=pickle.load(f)
+print(e)
