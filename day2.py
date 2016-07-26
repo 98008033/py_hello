@@ -9,3 +9,5 @@ for x in row:
     print(x)
 cursor.close ()
 con.close ()
+
+123
